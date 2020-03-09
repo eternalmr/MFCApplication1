@@ -109,7 +109,6 @@ BOOL CDynamicCreateCtrlsDlg::OnInitDialog()
 	// TODO: 在此添加额外的初始化代码
 	RECT rect;
 	GetClientRect(&rect);
-	//SetScrollRange(SB_HORZ, 0, rect.right - rect.left, TRUE);
 	SetScrollRange(SB_VERT, 0, rect.bottom - rect.top, TRUE);
 
 	CString str;

@@ -31,4 +31,5 @@ public:
 	CProgressCtrl m_ProgressCtrl;
 
 	int id;
+	CString m_name;
 };

@@ -14,6 +14,7 @@ IMPLEMENT_DYNAMIC(COneItem, CDialogEx)
 
 COneItem::COneItem(CWnd* pParent /*=nullptr*/)
 	: CDialogEx(IDD_ITEM, pParent)
+	, m_name(_T(""))
 {
 
 }
@@ -29,6 +30,7 @@ void COneItem::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_TEXT, m_text);
 	DDX_Control(pDX, IDC_TESTBTN, m_btn);
 	DDX_Control(pDX, IDC_PROGRESS2, m_ProgressCtrl);
+	DDX_Text(pDX, IDC_EDIT1, m_name);
 }
 
 
@@ -82,5 +84,4 @@ void COneItem::OnBnClickedTestbtn()
 		Sleep(1000);
 	}
 	m_ProgressCtrl.ShowWindow(FALSE);
-	//m_ProgressCtrl.EnableWindow(FALSE);
 }
